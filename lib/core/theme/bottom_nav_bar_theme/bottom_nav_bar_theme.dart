@@ -7,13 +7,12 @@ class BottomNavBarTheme {
   static const Color darkUnSelected = Color.fromARGB(255, 159, 155, 161);
   static const Color darkBackGroundColor = AppColors.darkBackGround;
 //
-  static const Color lightSelected = AppColors.primaryColor;
+  static final Color lightSelected = AppColors.darkPrimaryColor;
   static const Color lightUnSelected = Color.fromARGB(255, 123, 134, 138);
   static const Color lightBackGroundColor = AppColors.lightBackGround;
   //
   //
-  static BottomNavigationBarThemeData light =
-      const BottomNavigationBarThemeData(
+  static BottomNavigationBarThemeData light = BottomNavigationBarThemeData(
     elevation: 10,
     backgroundColor: lightBackGroundColor,
     type: BottomNavigationBarType.fixed,
@@ -24,7 +23,7 @@ class BottomNavBarTheme {
       fontSize: 11,
       fontWeight: Fonts.meduiom,
     ),
-    unselectedLabelStyle: TextStyle(color: lightUnSelected, fontSize: 11),
+    unselectedLabelStyle: const TextStyle(color: lightUnSelected, fontSize: 11),
   );
   //
   //

@@ -6,7 +6,7 @@ class CheckBoxTheme {
   static Color darkTrueColor = AppColors.whiteColor;
   //
   //
-  static Color lightBackgroundColor = AppColors.primaryColor;
+  static Color lightBackgroundColor = AppColors.darkPrimaryColor;
   static Color lightTrueColor = AppColors.whiteColor;
   //
   //

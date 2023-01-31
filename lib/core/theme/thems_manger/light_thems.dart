@@ -16,10 +16,17 @@ import '../icon_theme/icon_theme.dart';
 import '../radio_button_theme/radio_button_theme.dart';
 
 ThemeData lightTheme = ThemeData(
-    // navigationRailTheme:,
-
+    //
+    //
+    // elevatedButtonTheme: ,
+    // filledButtonTheme: const FilledButtonThemeData(
+    //   style: ButtonStyle(),
+    // ),
+    //
+    //
+    //
     listTileTheme: ListTileThemee.light,
-    focusColor: AppColors.primaryColor,
+    focusColor: AppColors.darkPrimaryColor,
     //
     dialogTheme: PopupTheme.light,
     //
@@ -39,13 +46,11 @@ ThemeData lightTheme = ThemeData(
     //
     iconTheme: IconThemeTheme.light,
     // /
-    primaryColor: AppColors.primaryColor,
+    primaryColor: AppColors.darkPrimaryColor,
     //
     shadowColor: AppColors.greyColor1,
     // /
     scaffoldBackgroundColor: ScaffoldColor.lightBackGroundColor,
-    //
-    errorColor: AppColors.redColor,
     // /
     textTheme: TextThemeLight.textTheme,
     //

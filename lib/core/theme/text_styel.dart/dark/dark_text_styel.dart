@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 
 class TextThemeDark {
   static final TextTheme textTheme = TextTheme(
-      headline1: _h1,
-      headline2: _h2,
-      headline3: h3,
-      headline4: _h4,
-      headline5: _h5,
-      headline6: _h6,
-      subtitle1: _subtitle1,
-      subtitle2: _subtitle2,
-      bodyText1: _bodyText1,
-      bodyText2: _bodyText2);
+    
+      displayLarge: _h1,
+      displayMedium: _h2,
+      displaySmall: h3,
+      headlineMedium: _h4,
+      headlineSmall: _h5,
+      titleLarge: _h6,
+      titleMedium: _subtitle1,
+      titleSmall: _subtitle2,
+      bodyLarge: _bodyText1,
+      bodyMedium: _bodyText2);
 
   static final _h1 = TextStyle(
       color: AppColors.whiteColor, fontSize: Fonts.h1, fontWeight: Fonts.bold);
@@ -22,9 +23,7 @@ class TextThemeDark {
       fontSize: Fonts.h2,
       fontWeight: Fonts.smeiBold);
   static final h3 = TextStyle(
-      color: AppColors.whiteColor,
-      fontSize: Fonts.h3,
-      fontWeight: Fonts.smeiBold);
+      color: AppColors.whiteColor, fontSize: Fonts.h3, fontWeight: Fonts.bold);
   static final _h4 = TextStyle(
       color: AppColors.whiteColor,
       fontSize: Fonts.h4,

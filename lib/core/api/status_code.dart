@@ -4,7 +4,6 @@ class StatusCode {
   static const int unauthorized = 401;
   static const int forbidden = 403;
   static const int notFound = 404;
-  static const int conflict = 409;
+  static const int confilct = 409;
   static const int internalServerError = 500;
-
 }

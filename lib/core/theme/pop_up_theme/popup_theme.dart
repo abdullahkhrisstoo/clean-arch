@@ -10,8 +10,8 @@ class PopupTheme {
   static const Color darkBodyColor = AppColors.greyColor1;
   //
   static const Color lightBackgroundColor = AppColors.whiteColor;
-  static const Color lightIconColor = AppColors.primaryColor;
-  static const Color lightTitleColor = AppColors.primaryColor;
+  static Color lightIconColor = AppColors.darkPrimaryColor;
+  static Color lightTitleColor = AppColors.darkPrimaryColor;
   static const Color lightBodyColor = AppColors.greyColor1;
 
   //
@@ -21,10 +21,9 @@ class PopupTheme {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     backgroundColor: darkBackgroundColor,
     iconColor: darkIconColor,
-    titleTextStyle:  TextStyle(
+    titleTextStyle: TextStyle(
         color: darkTitleColor, fontSize: Fonts.s18, fontWeight: Fonts.bold),
-    contentTextStyle:
-         TextStyle(color: darkBodyColor, fontSize: Fonts.s18),
+    contentTextStyle: TextStyle(color: darkBodyColor, fontSize: Fonts.s18),
   );
   //
   //
@@ -33,9 +32,9 @@ class PopupTheme {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     backgroundColor: lightBackgroundColor,
     iconColor: lightIconColor,
-    titleTextStyle:  TextStyle(
+    titleTextStyle: TextStyle(
         color: lightTitleColor, fontSize: Fonts.s18, fontWeight: Fonts.bold),
-    contentTextStyle:  TextStyle(
+    contentTextStyle: TextStyle(
       color: lightBodyColor,
       fontSize: Fonts.s18,
     ),

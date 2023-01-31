@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class RadioButtonTheme {
   static Color darkColor = const Color.fromARGB(255, 194, 248, 255);
-  static Color lightColor = AppColors.primaryColor;
+  static Color lightColor = AppColors.darkPrimaryColor;
 
   static RadioThemeData dark = RadioThemeData(
     fillColor: MaterialStateProperty.all(darkColor),

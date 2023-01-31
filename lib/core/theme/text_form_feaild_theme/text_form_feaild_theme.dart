@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 
 class TextFormFeaildTheme {
   //
-  static const Color darkBackgroundColor = Color.fromARGB(255, 20, 24, 28);
+  static const Color darkBackgroundColor = Color.fromARGB(255, 103, 108, 101);
   static Color darkErrorBorderColor = AppColors.redColor;
   static Color darkDisabeldBorderColor = AppColors.redColor;
-  static Color darkFoucesBorderColor = AppColors.primaryColor;
+  static Color darkFoucesBorderColor = AppColors.darkPrimaryColor;
   static Color darkEnabeldBorderColor = AppColors.whiteColor;
   static Color darkIconColor = AppColors.whiteColor;
   static Color darkLabelColor = AppColors.whiteColor;
-  static Color darkHintColor = AppColors.greyColor1;
+  static Color darkHintColor = AppColors.whiteColor;
   static Color darkCounterColor = AppColors.greyColor1;
   //
-  static Color lightBackgroundColor = const Color.fromARGB(255, 220, 227, 235);
+  static Color lightBackgroundColor = Color.fromARGB(255, 255, 255, 255);
   static Color lightErrorBorderColor = AppColors.redColor;
   static Color lightDisabeldBorderColor = AppColors.redColor;
-  static Color lightFoucesBorderColor = AppColors.primaryColor;
-  static Color lightEnabeldBorderColor = AppColors.whiteColor;
-  static Color lightIconColor = AppColors.primaryColor;
-  static Color lightLabelColor = AppColors.primaryColor;
+  static Color lightFoucesBorderColor = AppColors.darkPrimaryColor;
+  static Color lightEnabeldBorderColor = AppColors.secondaryColor;
+  static Color lightIconColor = AppColors.darkPrimaryColor;
+  static Color lightLabelColor = AppColors.darkPrimaryColor;
   static Color lightHintColor = AppColors.greyColor1;
   static Color lightCounterColor = AppColors.greyColor1;
 
@@ -34,11 +34,13 @@ class TextFormFeaildTheme {
     // floatingLabelStyle:,
     // helperStyle,
     // helperMaxLines,
-    hintStyle: TextStyle(fontSize: Fonts.s20, color: darkHintColor),
-    errorStyle: TextStyle(fontSize: Fonts.s20, color: darkErrorBorderColor),
+    hintStyle: TextStyle(
+        fontSize: Fonts.s16, color: darkHintColor, fontWeight: Fonts.bold),
+    errorStyle: TextStyle(fontSize: Fonts.s16, color: darkErrorBorderColor),
     errorMaxLines: 4,
 
-    contentPadding: const EdgeInsetsDirectional.only(top: 14, start: 8),
+    contentPadding:
+        const EdgeInsetsDirectional.only(top: 9, start: 8, bottom: 5),
 
     // prefixStyle,
     prefixIconColor: darkIconColor,
@@ -73,16 +75,17 @@ class TextFormFeaildTheme {
     alignLabelWithHint: false,
     iconColor: lightIconColor,
     fillColor: lightBackgroundColor,
-
     labelStyle: TextStyle(fontSize: Fonts.s20, color: lightLabelColor),
     // floatingLabelStyle:,
     // helperStyle,
     // helperMaxLines,
-    hintStyle: TextStyle(fontSize: Fonts.s20, color: lightHintColor),
-    errorStyle: TextStyle(fontSize: Fonts.s20, color: lightErrorBorderColor),
+    hintStyle: TextStyle(
+        fontSize: Fonts.s16, color: lightHintColor, fontWeight: Fonts.bold),
+    errorStyle: TextStyle(fontSize: Fonts.s16, color: lightErrorBorderColor),
     errorMaxLines: 4,
 
-    contentPadding: const EdgeInsetsDirectional.only(top: 14, start: 8),
+    contentPadding:
+        const EdgeInsetsDirectional.only(top: 9, start: 8, bottom: 5),
 
     // prefixStyle,
     prefixIconColor: lightIconColor,

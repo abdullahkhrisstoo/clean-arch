@@ -1,9 +1,8 @@
-import 'package:clean_arch_templeate/core/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CardThemee {
-  static Color backgroundLight = AppColors.lightBackGround;
-  static Color backgroundDark = AppColors.darkBackGround;
+  static Color backgroundLight = const Color.fromARGB(255, 231, 231, 231);
+  static Color backgroundDark = const Color.fromARGB(255, 41, 44, 42);
 
   //
   //

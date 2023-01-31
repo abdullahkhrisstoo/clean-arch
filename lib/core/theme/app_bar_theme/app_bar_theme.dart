@@ -9,9 +9,9 @@ class AppbarTheme {
   static const Color darkBackgroundColor = AppColors.darkBackGround;
   static const Color lightBackGroundColor = AppColors.lightBackGround;
   //
-  static AppBarTheme? light =  AppBarTheme(
+  static AppBarTheme? light = AppBarTheme(
       titleTextStyle: TextThemeLight.h3,
-      systemOverlayStyle: SystemUiOverlayStyle(
+      systemOverlayStyle: const SystemUiOverlayStyle(
           systemStatusBarContrastEnforced: true,
           statusBarBrightness: Brightness.dark,
           systemNavigationBarIconBrightness: Brightness.dark,
@@ -20,12 +20,12 @@ class AppbarTheme {
       backgroundColor: lightBackGroundColor,
       elevation: 0,
       centerTitle: false,
-      iconTheme: IconThemeData(color: AppColors.secondaryColor, size: 30));
+      iconTheme: const IconThemeData(color: AppColors.blackColor, size: 30));
 //
 //
-  static AppBarTheme? dark =  AppBarTheme(
+  static AppBarTheme? dark = AppBarTheme(
       titleTextStyle: TextThemeDark.h3,
-      systemOverlayStyle: SystemUiOverlayStyle(
+      systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarBrightness: Brightness.light,
           systemNavigationBarIconBrightness: Brightness.light,
           statusBarIconBrightness: Brightness.light,
@@ -33,5 +33,5 @@ class AppbarTheme {
       backgroundColor: darkBackgroundColor,
       elevation: 0,
       centerTitle: false,
-      iconTheme: IconThemeData(color: AppColors.secondaryColor, size: 30));
+      iconTheme: const IconThemeData(color: AppColors.whiteColor, size: 30));
 }

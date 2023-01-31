@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class FABTheme {
   static Color lightBackgroundColor = AppColors.secondaryColor;
   static Color lightforegroundColor = AppColors.blackColor;
-  static Color darkBackgroundColor = AppColors.primaryColor;
+  static Color darkBackgroundColor = AppColors.darkPrimaryColor;
   static Color darkforegroundColor = AppColors.whiteColor;
 //
 //

@@ -16,47 +16,45 @@ import '../icon_theme/icon_theme.dart';
 import '../radio_button_theme/radio_button_theme.dart';
 
 ThemeData darkTheme = ThemeData(
-  //
-  //
-
-  listTileTheme: ListTileThemee.dark,
-  //
-  //
-  focusColor: AppColors.primaryColor,
-  //
-  dialogTheme: PopupTheme.dark,
-  //
-  expansionTileTheme: ExpanedTheme.dark,
-  //
-  radioTheme: RadioButtonTheme.dark,
-  //
-  checkboxTheme: CheckBoxTheme.dark,
-  //
-  brightness: Brightness.dark,
-  //
-  dividerColor: AppColors.whiteColor,
-  //
-  appBarTheme: AppbarTheme.dark,
-  //
-  cardTheme: CardThemee.dark,
-  //
-  bottomNavigationBarTheme: BottomNavBarTheme.dark,
-  //
-  iconTheme: IconThemeTheme.dark,
-  //
-  primaryColor: AppColors.primaryColor,
-  //
-  shadowColor: AppColors.greyColor1,
-  //
-  scaffoldBackgroundColor: ScaffoldColor.darkBackgroundColor,
-  //
-  errorColor: AppColors.redColor,
-  // /
-  fontFamily: Fonts.family,
-  //
-  textTheme: TextThemeDark.textTheme,
-  //
-  floatingActionButtonTheme: FABTheme.dark,
-  //
-  inputDecorationTheme: TextFormFeaildTheme.dark,
-);
+  
+    //
+    //
+    // filledButtonTheme: ,
+    listTileTheme: ListTileThemee.dark,
+    //
+    //
+    focusColor: AppColors.darkPrimaryColor,
+    //
+    dialogTheme: PopupTheme.dark,
+    //
+    expansionTileTheme: ExpanedTheme.dark,
+    //
+    radioTheme: RadioButtonTheme.dark,
+    //
+    checkboxTheme: CheckBoxTheme.dark,
+    //
+    brightness: Brightness.dark,
+    //
+    dividerColor: AppColors.whiteColor,
+    //
+    appBarTheme: AppbarTheme.dark,
+    //
+    cardTheme: CardThemee.dark,
+    //
+    bottomNavigationBarTheme: BottomNavBarTheme.dark,
+    //
+    iconTheme: IconThemeTheme.dark,
+    //
+    primaryColor: AppColors.darkPrimaryColor,
+    //
+    shadowColor: AppColors.greyColor1,
+    //
+    scaffoldBackgroundColor: ScaffoldColor.darkBackgroundColor,
+    // /
+    fontFamily: Fonts.family,
+    //
+    textTheme: TextThemeDark.textTheme,
+    //
+    floatingActionButtonTheme: FABTheme.dark,
+    //
+    inputDecorationTheme: TextFormFeaildTheme.dark);

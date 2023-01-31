@@ -12,6 +12,7 @@ class Fonts {
 
   static const FontWeight light = FontWeight.w400;
 
+  static final double s12 = getDeviceType(12.0);
   static final double s16 = getDeviceType(16.0);
   static final double s17 = getDeviceType(17.0);
   static final double s18 = getDeviceType(18.0);
