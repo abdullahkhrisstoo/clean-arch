@@ -2,16 +2,15 @@
 
 import 'dart:developer';
 
+import 'package:clean_arch_templeate/core/components/button.dart';
 import 'package:clean_arch_templeate/core/components/custom_btn.dart';
 import 'package:clean_arch_templeate/core/components/text_form_feaild.dart';
-import 'package:clean_arch_templeate/core/navigation/navigation.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
 import 'package:clean_arch_templeate/features/auth/components/all_social_media_btn.dart';
 import 'package:clean_arch_templeate/features/auth/components/auth_form_widgit.dart';
 import 'package:clean_arch_templeate/features/auth/components/divider_for_social_media.dart';
 import 'package:clean_arch_templeate/features/auth/components/timer_resend.dart';
 import 'package:clean_arch_templeate/features/auth/cubit/auth_c_cubit.dart';
-import 'package:clean_arch_templeate/features/auth/screen/new_password_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,9 +22,8 @@ class FindYourAccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AuthCubit, AuthState>(
-      builder: (context, state) {
-        return AuthFormWidgit(
+    return BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
+      return AuthFormWidgit(
           formKey: AuthCubit.get(context).forgetPassFormKey,
           appBarIcon: Icon(Icons.account_balance_sharp),
           headersHeight: 0.3,
@@ -36,7 +34,7 @@ class FindYourAccountScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     H1('Find your Account'),
-                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In '),
+                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ')
                   ])),
           bodyChildren: [
             TextF(
@@ -57,19 +55,17 @@ class FindYourAccountScreen extends StatelessWidget {
                 : SizedBox(),
             TimerWidgit(),
             SizedBox(height: 10),
-            FillBTN(
-                title: 'Next',
-                onTap: () {
+            FilledBTN(
+                onPressed: () {
                   AuthCubit.get(context).forgetPassButton(context);
-                })
+                },
+                txt: 'Next')
           ],
           footerChildren: [
             SizedBox(height: 15),
             DividerForSocailMediaLogin(),
             InkWell(onTap: () {}, child: AllSocialMediaBTN())
-          ],
-        );
-      },
-    );
+          ]);
+    });
   }
 }

@@ -21,11 +21,13 @@ class OTPWidgit extends StatelessWidget {
                     ),
                     textInputAction: TextInputAction.next,
                     onChanged: (val) {
+
                       if (val.length == 1 && index <= 5) {
                         FocusScope.of(context).nextFocus();
                       } else if (val.isEmpty && index > 0) {
                         FocusScope.of(context).previousFocus();
                       }
+                      
                     },
                     style: Theme.of(context).textTheme.titleLarge,
                     keyboardType: TextInputType.number,

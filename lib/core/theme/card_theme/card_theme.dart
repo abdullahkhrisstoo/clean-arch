@@ -1,19 +1,16 @@
+import 'package:clean_arch_templeate/core/colors/dark_color.dart';
+import 'package:clean_arch_templeate/core/colors/light_color.dart';
 import 'package:flutter/material.dart';
 
 class CardThemee {
-  static Color backgroundLight = const Color.fromARGB(255, 231, 231, 231);
-  static Color backgroundDark = const Color.fromARGB(255, 41, 44, 42);
 
-  //
-  //
   static CardTheme light = CardTheme(
       elevation: 0,
       margin: const EdgeInsets.symmetric(vertical: 4),
-      color: backgroundLight);
-//
-//
+      color: LightColors.surfaceColor);
+
   static CardTheme dark = CardTheme(
       elevation: 0,
       margin: const EdgeInsets.symmetric(vertical: 4),
-      color: backgroundDark);
+      color: DarkColors.surfaceColor);
 }

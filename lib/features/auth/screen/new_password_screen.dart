@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:clean_arch_templeate/core/components/button.dart';
 import 'package:clean_arch_templeate/core/components/custom_btn.dart';
 import 'package:clean_arch_templeate/core/components/text_form_feaild.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
@@ -65,9 +66,9 @@ class NewPasswordScreen extends StatelessWidget {
                 }),
 
             SizedBox(height: 10),
-            FillBTN(
-                title: 'Update password',
-                onTap: () {
+            FilledBTN(
+                txt: 'Update password',
+                onPressed: () {
                   AuthCubit.get(context).setNewPasswordButton(context);
                 })
           ],

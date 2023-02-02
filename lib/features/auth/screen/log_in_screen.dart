@@ -1,9 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'dart:developer';
-
-import 'package:clean_arch_templeate/core/colors/app_colors.dart';
-import 'package:clean_arch_templeate/core/components/custom_btn.dart';
+import 'package:clean_arch_templeate/core/components/button.dart';
 import 'package:clean_arch_templeate/core/components/text_form_feaild.dart';
 import 'package:clean_arch_templeate/core/navigation/navigation.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
@@ -23,17 +19,22 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
       return AuthFormWidgit(
+          leading: BackButton(color: Theme.of(context).primaryColorDark),
           formKey: AuthCubit.get(context).loginFormKey,
-          appBarIcon: Icon(Icons.account_balance_sharp),
+          appBarIcon: Icon(
+            Icons.account_balance_sharp,
+            color: Theme.of(context).primaryColorDark,
+          ),
           headersHeight: 0.4,
           headersContent: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    H1('Login'),
-                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In '),
+                  children: [
+                    H1('Login', color: Theme.of(context).primaryColorDark),
+                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ',
+                        color: Theme.of(context).primaryColorDark),
                   ])),
           bodyChildren: [
             TextF(
@@ -59,12 +60,14 @@ class SignInScreen extends StatelessWidget {
                   AuthCubit.get(context).passwordVisabileToggel();
                 }),
             SizedBox(height: 10),
-            FillBTN(
-                title: 'Sign In', onTap: AuthCubit.get(context).loginButton),
-            TextButton(
-                onPressed: () => navigateTo(context, FindYourAccountScreen()),
-                child:
-                    H4('Forget password?', color: AppColors.darkPrimaryColor))
+            FilledBTN(
+              onPressed: AuthCubit.get(context).loginButton,
+              txt: 'Sign In',
+            ),
+            TextBTN(
+              onPressed: () => navigateTo(context, FindYourAccountScreen()),
+              text: 'Forget password?',
+            )
           ],
           footerChildren: [
             DividerForSocailMediaLogin(),

@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:clean_arch_templeate/core/components/button.dart';
 import 'package:clean_arch_templeate/core/components/custom_btn.dart';
 import 'package:clean_arch_templeate/core/components/text_form_feaild.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
@@ -44,16 +45,18 @@ class OtpScreen extends StatelessWidget {
                 hintText: '',
                 prefixIcon: const Icon(Icons.phone)),
             const SizedBox(height: 10),
+
             OTPWidgit(
               length: AuthCubit.get(context).otpLength,
               controller: List.generate(AuthCubit.get(context).otpLength,
                   (index) => AuthCubit.get(context).otpController[index]),
             ),
+            
             SizedBox(height: 10),
             TimerWidgit(),
-            FillBTN(
-                title: 'Next',
-                onTap: () {
+            FilledBTN(
+                txt: 'Next',
+                onPressed: () {
                   AuthCubit.get(context).phoneVerfiyButton();
                 }),
           ],

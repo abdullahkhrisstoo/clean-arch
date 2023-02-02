@@ -1,4 +1,3 @@
-import 'package:clean_arch_templeate/core/colors/app_colors.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +8,15 @@ class DividerForSocailMediaLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: Container(height: 1, color: AppColors.greyColor2)),
-        const Padding(
-            padding: EdgeInsets.all(8.0), child: Subtitle1('Or Sign In With')),
-        Expanded(child: Container(height: 1, color: AppColors.greyColor2))
+        Expanded(
+            child: Container(height: 1, color: Theme.of(context).dividerColor)),
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Subtitle1('Or Sign In With',
+              color: Theme.of(context).dividerColor),
+        ),
+        Expanded(
+            child: Container(height: 1, color: Theme.of(context).dividerColor))
       ],
     );
   }

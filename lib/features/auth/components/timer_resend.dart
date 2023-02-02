@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:clean_arch_templeate/core/colors/app_colors.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
 import 'package:flutter/material.dart';
 
@@ -56,8 +55,9 @@ class _TimerWidgitState extends State<TimerWidgit> {
                 });
                 startTimer();
               },
-              child: H5('Resend', color: AppColors.darkPrimaryColor))
-          : H5('0 : ${_start.toString()}', color: AppColors.darkPrimaryColor)
+              child: H5('Resend', color: Theme.of(context).primaryColor))
+          : H5('0 : ${_start.toString()}',
+              color: Theme.of(context).primaryColor)
     ]);
   }
 }

@@ -1,3 +1,4 @@
+import 'package:clean_arch_templeate/core/components/button.dart';
 import 'package:clean_arch_templeate/core/components/check_box.dart';
 import 'package:clean_arch_templeate/core/components/custom_btn.dart';
 import 'package:clean_arch_templeate/core/components/text_form_feaild.dart';
@@ -115,9 +116,10 @@ class RegisterScreen extends StatelessWidget {
               },
             ),
             // todo: register Function
-            FillBTN(
-                title: 'Register',
-                onTap: () {
+
+            FilledBTN(
+                txt: 'Register',
+                onPressed: () {
                   AuthCubit.get(context).registerButton();
                   navigateTo(context, const OtpScreen());
                 })

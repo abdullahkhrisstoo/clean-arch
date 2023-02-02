@@ -76,6 +76,11 @@ class AuthCubit extends Cubit<AuthState> {
 
   var otpController = List.generate(6, (index) => TextEditingController());
 
+
+
+
+
+
   // todo: ForgetPAssword
 
   String emailOrPhoneForForgetPassword = '';

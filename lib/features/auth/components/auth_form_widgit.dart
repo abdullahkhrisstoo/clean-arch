@@ -1,5 +1,4 @@
 import 'package:clean_arch_templeate/core/animation/fade_animation.dart';
-import 'package:clean_arch_templeate/core/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'package:clean_arch_templeate/core/extensions/sized_extension.dart';
@@ -12,19 +11,24 @@ class AuthFormWidgit extends StatelessWidget {
       required this.bodyChildren,
       required this.footerChildren,
       this.appBarIcon,
-      this.formKey});
+      this.formKey,
+      this.leading});
   final Widget? appBarIcon;
   final double headersHeight;
   final Widget headersContent;
   final List<Widget> bodyChildren;
   final List<Widget> footerChildren;
   final Key? formKey;
+  final Widget? leading;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: AppColors.darkPrimaryColor,
+          leading: leading,
+          titleTextStyle: TextStyle(color: Theme.of(context).primaryColorDark),
+          foregroundColor: Theme.of(context).primaryColorDark,
+          backgroundColor: Theme.of(context).primaryColor,
           centerTitle: true,
           title: appBarIcon,
         ),
@@ -35,7 +39,7 @@ class AuthFormWidgit extends StatelessWidget {
               height: MediaQueryValues(context).h * headersHeight,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: AppColors.darkPrimaryColor,
+                  color: Theme.of(context).primaryColor,
                   borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(40),
                       bottomRight: Radius.circular(40)))),
@@ -53,6 +57,8 @@ class AuthFormWidgit extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20)),
                         child: Card(
+                            // color: AppColors.greenColor,
+                            // surfaceTintColor: AppColors.redColor,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20.0)),
                             elevation: 5,
@@ -65,7 +71,7 @@ class AuthFormWidgit extends StatelessWidget {
                                     ...bodyChildren
                                   ]),
                                 )))),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     ...footerChildren
                   ]),
             ),

@@ -139,3 +139,17 @@ class BodyText2 extends Text {
     );
   }
 }
+
+class ButtonText extends Text {
+  const ButtonText(super.data, {super.key, this.color, this.textAlignment});
+  final Color? color;
+  final TextAlign? textAlignment;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      data ?? '',
+      style: Theme.of(context).textTheme.labelLarge,
+      textAlign: textAlignment,
+    );
+  }
+}

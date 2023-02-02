@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:clean_arch_templeate/core/colors/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -83,7 +82,6 @@ class TextF extends StatelessWidget {
           // textAlign: TextAlign.center,
           obscureText: isPass ?? false,
           style: Theme.of(context).textTheme.headlineMedium,
-          cursorColor: AppColors.darkPrimaryColor,
           keyboardType: keyboardType,
           textInputAction: textInputAction ?? TextInputAction.next,
           validator: validator,

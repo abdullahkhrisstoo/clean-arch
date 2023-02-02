@@ -1,6 +1,4 @@
-// ignore_for_file: prefer_const_constructors
 
-import 'package:clean_arch_templeate/core/colors/app_colors.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
 import 'package:clean_arch_templeate/features/auth/components/auth_form_widgit.dart';
 import 'package:flutter/material.dart';
@@ -17,29 +15,18 @@ class PassWordUpdateSueccfulyScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Icon(Icons.abc, size: 40))),
       bodyChildren: [
-        H2('Password Changed', color: AppColors.darkPrimaryColor),
+        H2(
+          'Password Changed',
+        ),
         const H5(
             'data data data data data datata data data data data data data data data data ',
             textAlignment: TextAlign.center),
-        Icon(
-          Icons.done,
-          color: AppColors.darkPrimaryColor,
-        ),
+        Icon(Icons.done),
         FilledButton(
           onPressed: () {},
           child: H4('back to login'),
           style: ButtonStyle(),
         ),
-        OutlinedButton(
-          onPressed: () {},
-          style: ButtonStyle(
-            animationDuration: Duration(seconds: 3),
-            backgroundColor:
-                MaterialStateProperty.all<Color>(AppColors.darkPrimaryColor),
-            foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-          ),
-          child: H4('hello', color: AppColors.whiteColor),
-        )
       ],
       footerChildren: [],
     );

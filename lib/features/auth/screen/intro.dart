@@ -1,6 +1,5 @@
-// // ignore_for_file: prefer_const_constructors
-import 'package:clean_arch_templeate/core/components/custom_btn.dart';
-import 'package:clean_arch_templeate/core/components/show_dialoge.dart';
+import 'package:clean_arch_templeate/core/colors/light_color.dart';
+import 'package:clean_arch_templeate/core/components/button.dart';
 import 'package:clean_arch_templeate/core/navigation/navigation.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
 import 'package:clean_arch_templeate/features/auth/components/all_social_media_btn.dart';
@@ -25,26 +24,20 @@ class IntroAuthScreen extends StatelessWidget {
         const H3("Welcome To Buy to Be"),
         const Subtitle1("Descover Amazing Things Near Around You"),
         const SizedBox(height: 20),
-        FillBTN(
-            title: 'Login',
-            onTap: () => navigateTo(context, const SignInScreen())),
-        NonFillBTN(
-          title: 'Register',
-          onTap: () => navigateTo(context, const RegisterScreen()),
-        ),
+        FilledBTN(
+            txt: 'Login',
+            onPressed: () => navigateTo(context, const SignInScreen())),
+        OutlinedBTN(
+            txt: 'Register',
+            onPressed: () => navigateTo(context, const RegisterScreen())),
         const DividerForSocailMediaLogin(),
-        const AllSocialMediaBTN()
+        const AllSocialMediaBTN(),
       ],
       footerChildren: [
-        TextButton(
-            onPressed: () {
-              showAlertDialog(
-                  context: context,
-                  content: 'Password update Succesfuly',
-                  defaultActionText: 'ff',
-                  title: 'Password update Succesfuly');
-            },
-            child: const BodyText2('Skip'))
+        TextBTN(
+          onPressed: () {},
+          text: 'Skip',
+        )
       ],
     );
   }
