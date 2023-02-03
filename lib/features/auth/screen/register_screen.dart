@@ -21,17 +21,21 @@ class RegisterScreen extends StatelessWidget {
     return BlocBuilder<AuthCubit, AuthState>(
       builder: (context, state) {
         return AuthFormWidgit(
+          leading: BackButton(color: Theme.of(context).colorScheme.onPrimary),
           formKey: AuthCubit.get(context).registerFormKey,
-          appBarIcon: const Icon(Icons.account_balance_sharp),
+          appBarIcon: Icon(Icons.account_balance_sharp,
+              color: Theme.of(context).colorScheme.onPrimary),
           headersHeight: 0.4,
           headersContent: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    H1('Register'),
-                    H5('Register Register Register Register Register Register Register Register Register '),
+                  children: [
+                    H1('Register',
+                        color: Theme.of(context).colorScheme.onPrimary),
+                    H5('Register Register Register Register Register Register Register Register Register ',
+                        color: Theme.of(context).colorScheme.onPrimary),
                   ])),
           bodyChildren: [
             // todo: username

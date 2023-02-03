@@ -5,7 +5,6 @@ class OTPWidgit extends StatelessWidget {
   const OTPWidgit({super.key, required this.length, this.controller});
   final int length;
   final List<TextEditingController>? controller;
-
   @override
   Widget build(BuildContext context) {
     return Row(

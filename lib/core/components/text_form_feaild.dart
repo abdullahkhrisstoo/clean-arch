@@ -78,7 +78,9 @@ class TextF extends StatelessWidget {
                 });
           });
     } else {
-      return TextFormField(
+      return 
+      
+      TextFormField(
           // textAlign: TextAlign.center,
           obscureText: isPass ?? false,
           style: Theme.of(context).textTheme.headlineMedium,

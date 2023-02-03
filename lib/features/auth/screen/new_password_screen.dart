@@ -20,17 +20,21 @@ class NewPasswordScreen extends StatelessWidget {
     return BlocBuilder<AuthCubit, AuthState>(
       builder: (context, state) {
         return AuthFormWidgit(
+          leading: BackButton(color: Theme.of(context).colorScheme.onPrimary),
           formKey: AuthCubit.get(context).newPasswordFormKey,
-          appBarIcon: Icon(Icons.account_balance_sharp),
+          appBarIcon: Icon(Icons.account_balance_sharp,
+              color: Theme.of(context).colorScheme.onPrimary),
           headersHeight: 0.3,
           headersContent: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    H1('new password'),
-                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In '),
+                  children: [
+                    H1('new password',
+                        color: Theme.of(context).colorScheme.onPrimary),
+                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ',
+                        color: Theme.of(context).colorScheme.onPrimary),
                   ])),
           bodyChildren: [
             TextF(

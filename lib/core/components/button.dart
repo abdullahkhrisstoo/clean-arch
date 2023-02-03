@@ -1,3 +1,4 @@
+import 'package:clean_arch_templeate/core/text/h1.dart';
 import 'package:flutter/material.dart';
 
 class FilledBTN extends StatelessWidget {
@@ -92,7 +93,11 @@ class OutlinedBTNIcon extends StatelessWidget {
 }
 
 class TextBTN extends StatelessWidget {
-  const TextBTN({super.key, this.onPressed, required this.text,});
+  const TextBTN({
+    super.key,
+    this.onPressed,
+    required this.text,
+  });
   final void Function()? onPressed;
   final String text;
 

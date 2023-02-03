@@ -7,6 +7,7 @@ import 'package:clean_arch_templeate/features/auth/components/auth_form_widgit.d
 import 'package:clean_arch_templeate/features/auth/components/divider_for_social_media.dart';
 import 'package:clean_arch_templeate/features/auth/screen/register_screen.dart';
 import 'package:clean_arch_templeate/features/auth/screen/log_in_screen.dart';
+import 'package:clean_arch_templeate/features/layout/screen/layout.dart';
 import 'package:flutter/material.dart';
 
 class IntroAuthScreen extends StatelessWidget {
@@ -35,7 +36,9 @@ class IntroAuthScreen extends StatelessWidget {
       ],
       footerChildren: [
         TextBTN(
-          onPressed: () {},
+          onPressed: () {
+            navigateTo(context, const Layout());
+          },
           text: 'Skip',
         )
       ],

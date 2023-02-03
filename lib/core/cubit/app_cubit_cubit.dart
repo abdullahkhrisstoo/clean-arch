@@ -5,8 +5,14 @@ import 'package:clean_arch_templeate/core/cubit/app_cubit_state.dart';
 import 'package:clean_arch_templeate/core/language/ar_lang.dart';
 import 'package:clean_arch_templeate/core/language/en_lang.dart';
 import 'package:clean_arch_templeate/core/language/lang.dart';
+import 'package:clean_arch_templeate/features/layout/screen/explore/explore_screen.dart';
+import 'package:clean_arch_templeate/features/layout/screen/notification/notification_screen.dart';
+import 'package:clean_arch_templeate/features/layout/screen/products/products_screens.dart';
+import 'package:clean_arch_templeate/features/layout/screen/saved/saved_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../features/layout/screen/menu/menu_scree.dart';
 
 class AppCubit extends Cubit<AppState> {
   AppCubit() : super(AppCubitInitial());
@@ -68,5 +74,20 @@ class AppCubit extends Cubit<AppState> {
     } else {
       return ThemeMode.dark;
     }
+  }
+
+  // todo APP LAYOUT
+  List<Widget> layoutScreen = const [
+    ExploreScreen(),
+    ProductsScreen(),
+    SavedScreen(),
+    NotificationScreen(),
+    MenuScreen(),
+  ];
+  List<Widget> layoutappBar = [];
+  int layoutIndex = 0;
+  void changeLayoutScreen(int index) {
+    layoutIndex = index;
+    emit(AppChangeLayoutState());
   }
 }

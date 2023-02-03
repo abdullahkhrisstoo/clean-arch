@@ -35,7 +35,7 @@ ThemeData darkTheme = ThemeData(
   sliderTheme: SliderTh.sliderThemeDark, //todo
   floatingActionButtonTheme: FABTheme.dark, //todo
   appBarTheme: AppbarTheme.dark, //todo
-  navigationBarTheme: BottomNavBarTheme.dark, //todo
+  // navigationBarTheme: BottomNavBarTheme.dark, //todo
   dividerColor: DarkColors.outlineColor, //todo
   iconTheme: IconThemeTheme.dark, //todo
   shadowColor: DarkColors.outlineColor, //todo

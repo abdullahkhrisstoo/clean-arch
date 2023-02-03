@@ -21,17 +21,21 @@ class OtpScreen extends StatelessWidget {
     return BlocBuilder<AuthCubit, AuthState>(
       builder: (context, state) {
         return AuthFormWidgit(
+          leading: BackButton(color: Theme.of(context).colorScheme.onPrimary),
           formKey: AuthCubit.get(context).verfiyPhonekey,
-          appBarIcon: const Icon(Icons.account_balance_sharp),
+          appBarIcon: Icon(Icons.account_balance_sharp,
+              color: Theme.of(context).colorScheme.onPrimary),
           headersHeight: 0.4,
           headersContent: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    H1('Phone verfiy'),
-                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ')
+                  children: [
+                    H1('Phone verfiy',
+                        color: Theme.of(context).colorScheme.onPrimary),
+                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ',
+                        color: Theme.of(context).colorScheme.onPrimary)
                   ])),
           bodyChildren: [
             TextF(
@@ -45,15 +49,13 @@ class OtpScreen extends StatelessWidget {
                 hintText: '',
                 prefixIcon: const Icon(Icons.phone)),
             const SizedBox(height: 10),
-
             OTPWidgit(
               length: AuthCubit.get(context).otpLength,
               controller: List.generate(AuthCubit.get(context).otpLength,
                   (index) => AuthCubit.get(context).otpController[index]),
             ),
-            
-            SizedBox(height: 10),
-            TimerWidgit(),
+            const SizedBox(height: 10),
+            const TimerWidgit(),
             FilledBTN(
                 txt: 'Next',
                 onPressed: () {
@@ -61,13 +63,13 @@ class OtpScreen extends StatelessWidget {
                 }),
           ],
           footerChildren: [
-            SizedBox(height: 15),
-            DividerForSocailMediaLogin(),
+            const SizedBox(height: 15),
+            const DividerForSocailMediaLogin(),
             InkWell(
                 onTap: () {
                   log(AuthCubit.get(context).loginPhoneOrEmail);
                 },
-                child: AllSocialMediaBTN())
+                child: const AllSocialMediaBTN())
           ],
         );
       },

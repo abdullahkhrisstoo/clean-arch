@@ -35,7 +35,7 @@ ThemeData lightTheme = ThemeData(
   sliderTheme: SliderTh.sliderThemeLight, //todo
   floatingActionButtonTheme: FABTheme.light, //todo
   appBarTheme: AppbarTheme.light, //todo
-  navigationBarTheme: BottomNavBarTheme.light, //todo
+  // navigationBarTheme: BottomNavBarTheme.light, //todo
   dividerColor: LightColors.outlineColor, //todo
   iconTheme: IconThemeTheme.light, //todo
   shadowColor: LightColors.outlineColor, //todo

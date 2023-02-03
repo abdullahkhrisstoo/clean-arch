@@ -1,9 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'dart:developer';
-
 import 'package:clean_arch_templeate/core/components/button.dart';
-import 'package:clean_arch_templeate/core/components/custom_btn.dart';
 import 'package:clean_arch_templeate/core/components/text_form_feaild.dart';
 import 'package:clean_arch_templeate/core/text/h1.dart';
 import 'package:clean_arch_templeate/features/auth/components/all_social_media_btn.dart';
@@ -24,17 +19,21 @@ class FindYourAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
       return AuthFormWidgit(
+          leading: BackButton(color: Theme.of(context).colorScheme.onPrimary),
           formKey: AuthCubit.get(context).forgetPassFormKey,
-          appBarIcon: Icon(Icons.account_balance_sharp),
+          appBarIcon: Icon(Icons.account_balance_sharp,
+              color: Theme.of(context).colorScheme.onPrimary),
           headersHeight: 0.3,
           headersContent: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    H1('Find your Account'),
-                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ')
+                  children: [
+                    H1('Find your Account',
+                        color: Theme.of(context).colorScheme.onPrimary),
+                    H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ',
+                        color: Theme.of(context).colorScheme.onPrimary)
                   ])),
           bodyChildren: [
             TextF(
@@ -45,16 +44,16 @@ class FindYourAccountScreen extends StatelessWidget {
                 },
                 validator: Validatior.emailOrPhone,
                 hintText: 'Enter Your Email or Phone',
-                prefixIcon: Icon(Icons.person)),
-            SizedBox(height: 10),
+                prefixIcon: const Icon(Icons.person)),
+            const SizedBox(height: 10),
             AuthCubit.get(context).emailOrPhoneForForgetPassword.length > 10
                 ? OTPWidgit(
                     length: AuthCubit.get(context).otpLength,
                     controller: List.generate(AuthCubit.get(context).otpLength,
                         (index) => AuthCubit.get(context).otpController[index]))
-                : SizedBox(),
-            TimerWidgit(),
-            SizedBox(height: 10),
+                : const SizedBox(),
+            const TimerWidgit(),
+            const SizedBox(height: 10),
             FilledBTN(
                 onPressed: () {
                   AuthCubit.get(context).forgetPassButton(context);
@@ -62,9 +61,9 @@ class FindYourAccountScreen extends StatelessWidget {
                 txt: 'Next')
           ],
           footerChildren: [
-            SizedBox(height: 15),
-            DividerForSocailMediaLogin(),
-            InkWell(onTap: () {}, child: AllSocialMediaBTN())
+            const SizedBox(height: 15),
+            const DividerForSocailMediaLogin(),
+            InkWell(onTap: () {}, child: const AllSocialMediaBTN())
           ]);
     });
   }

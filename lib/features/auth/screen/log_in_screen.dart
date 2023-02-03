@@ -14,17 +14,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
       return AuthFormWidgit(
           leading: BackButton(color: Theme.of(context).primaryColorDark),
           formKey: AuthCubit.get(context).loginFormKey,
-          appBarIcon: Icon(
-            Icons.account_balance_sharp,
-            color: Theme.of(context).primaryColorDark,
-          ),
+          appBarIcon: Icon(Icons.account_balance_sharp,
+              color: Theme.of(context).primaryColorDark),
           headersHeight: 0.4,
           headersContent: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -32,9 +29,9 @@ class SignInScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    H1('Login', color: Theme.of(context).primaryColorDark),
+                    H1('Login', color: Theme.of(context).colorScheme.onPrimary),
                     H5('Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In Sign In ',
-                        color: Theme.of(context).primaryColorDark),
+                        color: Theme.of(context).colorScheme.onPrimary),
                   ])),
           bodyChildren: [
             TextF(
@@ -44,8 +41,8 @@ class SignInScreen extends StatelessWidget {
                 },
                 validator: Validatior.emailOrPhone,
                 hintText: 'Enter your Email or Phone',
-                prefixIcon: Icon(Icons.person)),
-            SizedBox(height: 10),
+                prefixIcon: const Icon(Icons.person)),
+            const SizedBox(height: 10),
             TextF(
                 keyboardType: TextInputType.visiblePassword,
                 onChanged: (val) {
@@ -54,28 +51,26 @@ class SignInScreen extends StatelessWidget {
                 validator: Validatior.passwordValidator,
                 isPass: AuthCubit.get(context).isHidePassword,
                 hintText: 'Enter Password',
-                prefixIcon: Icon(Icons.password),
+                prefixIcon: const Icon(Icons.password),
                 suffixIcon: Icon(AuthCubit.get(context).passordVisabileIcon),
                 suffixIconFunction: () {
                   AuthCubit.get(context).passwordVisabileToggel();
                 }),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             FilledBTN(
-              onPressed: AuthCubit.get(context).loginButton,
-              txt: 'Sign In',
-            ),
+                onPressed: AuthCubit.get(context).loginButton, txt: 'Sign In'),
             TextBTN(
-              onPressed: () => navigateTo(context, FindYourAccountScreen()),
-              text: 'Forget password?',
-            )
+                onPressed: () =>
+                    navigateTo(context, const FindYourAccountScreen()),
+                text: 'Forget password?')
           ],
           footerChildren: [
-            DividerForSocailMediaLogin(),
+            const DividerForSocailMediaLogin(),
             InkWell(
                 onTap: () {
                   log(AuthCubit.get(context).loginPhoneOrEmail);
                 },
-                child: AllSocialMediaBTN())
+                child: const AllSocialMediaBTN())
           ]);
     });
   }

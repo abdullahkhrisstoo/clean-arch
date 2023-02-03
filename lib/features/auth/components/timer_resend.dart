@@ -46,7 +46,7 @@ class _TimerWidgitState extends State<TimerWidgit> {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      const H5('Don\' recive code?'),
+      H5('Don\' recive code?', color: Theme.of(context).colorScheme.onSurface),
       _start == 0
           ? InkWell(
               onTap: () {
@@ -55,9 +55,10 @@ class _TimerWidgitState extends State<TimerWidgit> {
                 });
                 startTimer();
               },
-              child: H5('Resend', color: Theme.of(context).primaryColor))
+              child:
+                  H5('Resend', color: Theme.of(context).colorScheme.onSurface))
           : H5('0 : ${_start.toString()}',
-              color: Theme.of(context).primaryColor)
+              color: Theme.of(context).colorScheme.primary)
     ]);
   }
 }
